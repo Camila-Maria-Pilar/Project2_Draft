@@ -25,7 +25,7 @@
     <div class="container">
       <h1>NBS POD Creator</h1>
       <p>Please follow the below prompts and instructions to create the POD.</p>
-      <p>After your POD has been created, a QR Code will be generated to be scanned once the Items have been picked up/delivered.</p>
+      
 
       <div class="section">
         <h3>Sale / WO Details</h3>
@@ -38,10 +38,13 @@
             <tr>
               <td>Created By:</td>
               <td>
-                <select id="createdBy">
-                  <!-- Staff members options will be added dynamically -->
+                <select id="dropdownStaff">
+                  <option value="option1"></option>
+                  <option value="option1">Claire Watts</option>
+                  <option value="option2">James Cooks</option>
+                  <option value="option3">Larry Wong</option>
                 </select>
-                <button id="addStaff">Add</button>
+                
               </td>
             </tr>
             <tr>
@@ -51,10 +54,12 @@
             <tr>
               <td>Client:</td>
               <td>
-                <select id="client">
-                  <!-- Clients options will be added dynamically -->
+                <select id="dropdownClient">
+                  <option value="option1"></option>
+                  <option value="option1">BHP</option>
+                  <option value="option2">RIO TINTO</option>
+                  <option value="option3">AJ Machinery</option>
                 </select>
-                <button id="addClient">Add</button>
               </td>
             </tr>
             <tr>
@@ -64,10 +69,12 @@
             <tr>
               <td>Courier:</td>
               <td>
-                <select id="courier">
-                  <!-- Couriers options will be added dynamically -->
+                <select id="dropdownCourier">
+                  <option value="option1"></option>
+                  <option value="option1">LINFOX</option>
+                  <option value="option2">CENTURION</option>
+                  <option value="option3">TOLL</option>
                 </select>
-                <button id="addCourier">Add</button>
               </td>
             </tr>
             <tr>
@@ -88,55 +95,50 @@
       <div class="section">
         <h3>Items Details</h3>
         <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Description</th>
-              <th>Qty</th>
-              <th>Length (cm)</th>
-              <th>Width (cm)</th>
-              <th>Height (cm)</th>
-              <th>Weight (Kg)</th>
-            </tr>
-          </thead>
-          <tbody id="itemDetailsTableBody">
-            <!-- Item details rows will be dynamically added using JavaScript -->
-          </tbody>
-        </table>
-        <button id="addItem">Add Item</button>
-      </div>
-
-      <div class="section">
-        <h3>Delivery Details</h3>
-        <table>
           <tbody>
             <tr>
-              <td>Contact Name:</td>
-              <td><!-- Auto-populated contact name from POD Master Section --></td>
+              <td>Item:</td>
+              <td>
+                <select id="dropdownItem">
+                  <option value="option1"></option>
+                  <option value="option1">Tool Cabinet</option>
+                  <option value="option2">Excavator Bucket</option>
+                  <option value="option3">Fuel Tank</option>
+                </select>                
+              </td>
             </tr>
             <tr>
-              <td>Contact Number:</td>
-              <td><!-- Auto-populated contact number from POD Master Section --></td>
+              <td>QTY:</td>
+              <td>
+                <select id="dropdown1">
+                  <option value="option1"></option>
+                  <option value="option1">1</option>
+                  <option value="option1">2</option>
+                  <option value="option1">3</option>
+                  <option value="option1">4</option>
+                  <option value="option1">5</option>
+                  <option value="option1">6</option>
+                  <option value="option1">7</option>
+                  <option value="option1">8</option>
+                  <option value="option1">9</option>
+                  <option value="option1">10</option>
+                  <option value="option1">10+</option>                 
+                </select> 
             </tr>
             <tr>
-              <td>Contact Email:</td>
-              <td><!-- Auto-populated contact email from POD Master Section --></td>
-            </tr>
+              <td>Dimensions (cm) L*W*H / Kg:</td>
+              <td><input type="text" id="poId"></td>
+            </tr>                   
           </tbody>
         </table>
       </div>
-
+          
+     
       <div class="section">
         <h3>Travel Request Details</h3>
         <table>
           <tbody>
-            <tr>
-              <td>Travel Request Completed?</td>
-              <td>
-                <label><input type="radio" name="travelRequestCompleted" value="yes"> Yes</label>
-                <label><input type="radio" name="travelRequestCompleted" value="na"> N/A</label>
-              </td>
-            </tr>
+            
             <tr>
               <td>Booking Reference</td>
               <td><input type="text" id="bookingReference"></td>
@@ -151,7 +153,7 @@
             </tr>
             <tr>
               <td>Date</td>
-              <td><input type="date" id="travelRequestDate"></td>
+              <td><input type="text" id="travelRequestDate"></td>
             </tr>
           </tbody>
         </table>
